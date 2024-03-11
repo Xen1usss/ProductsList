@@ -60,9 +60,7 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion") { exclude module: 'okhttp' }
     implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
 
-    def adapterDelegatesVersion = "4.3.0" //recyclerView delegates
-    implementation "com.hannesdorfmann:adapterdelegates4-kotlin-dsl:$adapterDelegatesVersion"
-    implementation "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapterDelegatesVersion"
-
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
 }

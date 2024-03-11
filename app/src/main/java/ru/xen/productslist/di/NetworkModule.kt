@@ -16,7 +16,9 @@ val networkModule = module {
         Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
     }
     single<Interceptor> {
-        HttpLoggingInterceptor(HttpLoggingInterceptor.Logger { Log.d("OKHTTP", it) }).setLevel(HttpLoggingInterceptor.Level.BODY)
+        HttpLoggingInterceptor(HttpLoggingInterceptor.Logger { Log.d("OKHTTP", it) }).setLevel(
+            HttpLoggingInterceptor.Level.BODY
+        )
     }
     single {
         OkHttpClient.Builder().addInterceptor(get<Interceptor>()).build()
